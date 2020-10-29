@@ -6,10 +6,7 @@
 
 <script>
     export default {
-        name: "Ashine"
-    }
+        name: 'Ashine'
+    };
 </script>
-
-<style scoped>
-
-</style>
+shine

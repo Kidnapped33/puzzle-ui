@@ -1,15 +1,17 @@
 <template>
-    <div>hi</div>
-    <Ashine/>
+<div>
+    导航栏|
+    <router-link to="/">Ashine</router-link>
+    |
+    <router-link to="/xxx">Ashine2</router-link>
+</div>
+
+<hr />
+<router-view />
 </template>
 
 <script>
-    import Ashine from "./components/Ashine.vue";
-
-    export default {
-        name: 'App',
-        components: {
-            Ashine,
-        }
-    }
+export default {
+    name: "App"
+};
 </script>

@@ -1,16 +1,16 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import './index.css';
+import './index.scss';
 import { createWebHashHistory, createRouter } from 'vue-router';
-import Ashine from './components/Ashine.vue';
-import Ashine2 from './components/Ashine2.vue';
+import Home from './views/Home.vue';
+import Doc from './views/Doc.vue';
 
 const history = createWebHashHistory();
 const router = createRouter({
     history: history,
     routes: [
-        { path: '/', component: Ashine },
-        { path: '/xxx', component: Ashine2 }
+        { path: '/', component: Home },
+        { path: '/doc', component: Doc }
     ]
 });
 

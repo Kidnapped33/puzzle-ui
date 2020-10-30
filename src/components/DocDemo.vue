@@ -1,5 +1,5 @@
 <template>
 <div>
-    <div>switch CONTENT</div>
+    doc 默认首页
 </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
 <div>
-    <div>switch CONTENT</div>
+    Dialog
 </div>
 </template>

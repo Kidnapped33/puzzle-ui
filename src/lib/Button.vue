@@ -1,9 +1,16 @@
 <template>
-<button>
+<button class="gulu-button" :class="`theme-${theme}`">
     <slot />
 </button>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+export default {
+    props: {
+        theme: {
+            type: String,
+            default: "button"
+        }
+    }
+};
 </script>

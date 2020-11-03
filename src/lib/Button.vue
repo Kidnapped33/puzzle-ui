@@ -1,5 +1,5 @@
 <template>
-<button class="puzzle-button" :class="`theme-${theme}`">
+<button class="puzzle-button" :class="`puzzle-theme-${theme}`">
     <slot />
 </button>
 </template>
@@ -54,6 +54,28 @@ $radius: 4px;
     //解决在Firefox下，类型为button的元素使用outline: none没用的问题
     &::-moz-focus-inner {
         border: 0;
+    }
+
+    &.puzzle-theme-link {
+        border-color: transparent;
+        box-shadow: none;
+        color: $blue;
+
+        &:hover,
+        &:focus {
+            color: lighten($blue, 10%);
+        }
+    }
+
+    &.puzzle-theme-text {
+        border-color: transparent;
+        box-shadow: none;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            background: darken(white, 5%);
+        }
     }
 }
 </style>

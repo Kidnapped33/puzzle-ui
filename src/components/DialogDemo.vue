@@ -7,8 +7,8 @@
     <Button @click="toggle">切换</Button>
     <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
         <template v-slot:content>
-            <div>nihao 1</div>
-            <div>nihao 2</div>
+            <div>修改1</div>
+            <div>修改2</div>
         </template>
         <template v-slot:title>
             <strong>加粗的标题</strong>
@@ -39,10 +39,10 @@ export default {
             x.value = !x.value;
         };
         const f1 = () => {
-            console.log(1);
+            return false;
         };
         const f2 = () => {
-            console.log(2);
+            return false;
         };
         return {
             x,

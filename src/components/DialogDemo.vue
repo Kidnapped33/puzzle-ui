@@ -5,7 +5,7 @@
     </div>
     <h1>示例1</h1>
     <Button @click="toggle">切换</Button>
-    <Dialog :visible="x"></Dialog>
+    <Dialog :visible="x" @update:visible="x = $event"></Dialog>
   </div>
 </template lang="ts">
 

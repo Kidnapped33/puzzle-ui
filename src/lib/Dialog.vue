@@ -1,20 +1,20 @@
 <template>
 <div>
     <template v-if="visible">
-        <div class="puzzle-dialog-overlay"></div>
+        <div @click="close" class="puzzle-dialog-overlay"></div>
         <div class="puzzle-dialog-wrapper">
             <div class="puzzle-dialog">
                 <header>
                     标题
-                    <span class="puzzle-dialog-close"></span>
+                    <span @click="close" class="puzzle-dialog-close"></span>
                 </header>
                 <main>
                     <p>第一行字</p>
                     <p>第二行字</p>
                 </main>
                 <footer>
-                    <Button level="main">OK</Button>
-                    <Button>Cancel</Button>
+                    <Button @click="close" level="main">OK</Button>
+                    <Button @click="close">Cancel</Button>
                 </footer>
             </div>
         </div>
@@ -33,6 +33,14 @@ export default {
     },
     components: {
         Button
+    },
+    setup(props, context) {
+        const close = () => {
+            context.emit("update:visible", false);
+        };
+        return {
+            close
+        };
     }
 };
 </script>

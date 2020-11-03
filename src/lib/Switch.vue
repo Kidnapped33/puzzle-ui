@@ -48,7 +48,7 @@ $h: 22px;
     }
 
     &.puzzle-checked {
-        background: rgb(36, 173, 243);
+        background: rgb(128, 214, 70);
 
         >span {
             position: absolute;

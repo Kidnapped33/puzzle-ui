@@ -1,5 +1,5 @@
 <template>
-<button class="puzzle-button" :class="classes">
+<button class="puzzle-button" :class="classes" :disabled="disabled">
     <slot />
 </button>
 </template>
@@ -21,6 +21,10 @@ export default {
         level: {
             type: String,
             default: "normal"
+        },
+        disabled: {
+            type: Boolean,
+            default: false
         }
     },
     setup(props) {
@@ -47,9 +51,10 @@ export default {
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
+$green: rgb(126, 223, 62);
 $radius: 4px;
 $red: red;
+$grey: grey;
 
 .puzzle-button {
     box-sizing: border-box;
@@ -65,7 +70,6 @@ $red: red;
     border: 1px solid $border-color;
     border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
-    transition: background 250ms;
 
     &+& {
         margin-left: 8px;
@@ -73,8 +77,8 @@ $red: red;
 
     &:hover,
     &:focus {
-        color: $blue;
-        border-color: $blue;
+        color: $green;
+        border-color: $green;
     }
 
     &:focus {
@@ -89,11 +93,11 @@ $red: red;
     &.puzzle-theme-link {
         border-color: transparent;
         box-shadow: none;
-        color: $blue;
+        color: $green;
 
         &:hover,
         &:focus {
-            color: lighten($blue, 10%);
+            color: lighten($green, 20%);
         }
     }
 
@@ -105,6 +109,32 @@ $red: red;
         &:hover,
         &:focus {
             background: darken(white, 5%);
+        }
+    }
+
+    &.puzzle-theme-shrink {
+        border: 1px solid rgb(211, 207, 207);
+        color: $green;
+
+        &:hover,
+        &:focus {
+            color: black;
+            border-radius: 40% / 70%;
+            transition: border-radius 2s;
+            background-color: $green;
+        }
+    }
+
+    &.puzzle-theme-stretch {
+        border-radius: 40% / 70%;
+        background-color: $green;
+
+        &:hover,
+        &:focus {
+            color: $green;
+            background-color: white;
+            border-color: transparent;
+            transition: border 1.5s;
         }
     }
 
@@ -122,24 +152,26 @@ $red: red;
 
     &.puzzle-theme-button {
         &.puzzle-level-main {
-            background: $blue;
-            color: white;
-            border-color: $blue;
+            background: $green;
+            border-color: $green;
 
             &:hover,
             &:focus {
-                background: darken($blue, 10%);
-                border-color: darken($blue, 10%);
+                color: white;
+                background: darken($green, 10%);
+                border-color: darken($green, 10%);
             }
         }
 
         &.puzzle-level-danger {
             background: $red;
             border-color: $red;
+            font-weight: 700;
             color: white;
 
             &:hover,
             &:focus {
+                color: black;
                 background: darken($red, 10%);
                 border-color: darken($red, 10%);
             }
@@ -149,31 +181,54 @@ $red: red;
     &.puzzle-theme-link {
         &.puzzle-level-danger {
             color: $red;
+            font-weight: 700;
 
             &:hover,
             &:focus {
-                color: darken($red, 10%);
+                color: darken($red, 80%);
+                background: $red;
             }
         }
     }
 
     &.puzzle-theme-text {
         &.puzzle-level-main {
-            color: $blue;
+            color: $green;
 
             &:hover,
             &:focus {
-                color: darken($blue, 10%);
+                color: darken($green, 10%);
             }
         }
 
         &.puzzle-level-danger {
             color: $red;
+            font-weight: 700;
 
             &:hover,
             &:focus {
-                color: darken($red, 10%);
+                color: white;
+                background: $red;
             }
+        }
+    }
+
+    &.puzzle-theme-button {
+        &[disabled] {
+            cursor: not-allowed;
+            color: $grey;
+
+            &:hover {
+                border-color: $grey;
+            }
+        }
+    }
+
+    &.puzzle-theme-link,
+    &.puzzle-theme-text {
+        &[disabled] {
+            cursor: not-allowed;
+            color: $grey;
         }
     }
 }

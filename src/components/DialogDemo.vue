@@ -1,16 +1,23 @@
 <template>
-  <div>
+<div>
     <div>
-      Dialog
+        Dialog
     </div>
     <h1>示例1</h1>
     <Button @click="toggle">切换</Button>
-    <Dialog
-      v-model:visible="x"
-      :closeOnClickOverlay="false"
-      :ok="f1"
-      :cancel="f2"
-    ></Dialog>
+    <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
+        <template v-slot:content>
+            <div>nihao 1</div>
+            <div>nihao 2</div>
+        </template>
+        <template v-slot:title>
+            <strong>加粗的标题</strong>
+        </template>
+    </Dialog>
+</div>
+</template>
+
+    </Dialog>
   </div>
 </template lang="ts">
 

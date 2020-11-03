@@ -5,7 +5,12 @@
     </div>
     <h1>示例1</h1>
     <Button @click="toggle">切换</Button>
-    <Dialog :visible="x" @update:visible="x = $event"></Dialog>
+    <Dialog
+      v-model:visible="x"
+      :closeOnClickOverlay="false"
+      :ok="f1"
+      :cancel="f2"
+    ></Dialog>
   </div>
 </template lang="ts">
 
@@ -26,9 +31,17 @@ export default {
         const toggle = () => {
             x.value = !x.value;
         };
+        const f1 = () => {
+            console.log(1);
+        };
+        const f2 = () => {
+            console.log(2);
+        };
         return {
             x,
-            toggle
+            toggle,
+            f1,
+            f2
         };
     }
 };

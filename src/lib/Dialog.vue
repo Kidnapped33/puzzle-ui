@@ -1,7 +1,7 @@
 <template>
 <div>
     <template v-if="visible">
-        <div @click="close" class="puzzle-dialog-overlay"></div>
+        <div @click="onClickOverlay" class="puzzle-dialog-overlay"></div>
         <div class="puzzle-dialog-wrapper">
             <div class="puzzle-dialog">
                 <header>
@@ -29,8 +29,19 @@ export default {
         visible: {
             type: Boolean,
             default: false
+        },
+        closeOnClickOverlay: {
+            type: Boolean,
+            default: true
+        },
+        ok: {
+            type: Function
+        },
+        cancel: {
+            type: Function
         }
     },
+
     components: {
         Button
     },
@@ -38,8 +49,23 @@ export default {
         const close = () => {
             context.emit("update:visible", false);
         };
+        const onClickOverlay = () => {
+            if (props.closeOnClickOverlay) {
+                close();
+            }
+        };
+        const ok = () => {
+            //props.ok && props.ok() !== false
+            if (props.ok?.() !== false) {
+                close();
+            }
+        };
+        const cancel = () => {};
         return {
-            close
+            close,
+            onClickOverlay,
+            ok,
+            cancel
         };
     }
 };

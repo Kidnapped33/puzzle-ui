@@ -35,30 +35,29 @@ button {
     border-radius: $h/2;
     position: relative;
     cursor: pointer;
-}
 
-span {
-    position: absolute;
-    height: $h;
-    width: $h;
-    background: white;
-    left: 0px;
-    top: 0px;
-    border-radius: $h/2;
-    // transition: all 1s linear;
-    transition: left 250ms;
-}
+    >span {
+        position: absolute;
+        height: $h;
+        width: $h;
+        background: white;
+        left: 0px;
+        top: 0px;
+        border-radius: $h/2;
+        transition: left 250ms;
+    }
 
-button.checked {
-    background: rgb(36, 173, 243);
-}
+    &.checked {
+        background: rgb(36, 173, 243);
 
-button.checked>span {
-    position: absolute;
-    left: $h;
-}
+        >span {
+            position: absolute;
+            left: $h;
+        }
+    }
 
-button:focus {
-    outline: none;
+    &:focus {
+        outline: none;
+    }
 }
 </style>

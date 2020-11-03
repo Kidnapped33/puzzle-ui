@@ -1,5 +1,5 @@
 <template>
-<button @click="toggle" :class="{ checked: value }">
+<button class="puzzle-swith" @click="toggle" :class="{ 'puzzle-checked': value }">
     <span></span>
 </button>
 </template>
@@ -24,10 +24,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 
-button {
+.puzzle-swith {
     height: $h;
     width: $h * 2;
     border: none;
@@ -47,7 +47,7 @@ button {
         transition: left 250ms;
     }
 
-    &.checked {
+    &.puzzle-checked {
         background: rgb(36, 173, 243);
 
         >span {

@@ -76,7 +76,7 @@ export default {
     >main {
         flex-grow: 1;
         padding: 16px;
-        background: rgb(251, 182, 199);
+        background: white;
     }
 }
 
@@ -89,6 +89,7 @@ aside {
     left: 0;
     padding-top: 70px;
     height: 100%;
+    border: 5px solid snow;
 
     >h2 {
         margin-bottom: 4px;

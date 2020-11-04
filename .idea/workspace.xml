@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8021e75-e64a-4980-a3a8-548822c8841f" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Tab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tab.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Tabs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <workItem from="1603807373635" duration="596000" />
       <workItem from="1603979982659" duration="706000" />
       <workItem from="1603980811891" duration="26000" />
-      <workItem from="1604468218739" duration="5031000" />
+      <workItem from="1604468218739" duration="6248000" />
     </task>
     <servers />
   </component>

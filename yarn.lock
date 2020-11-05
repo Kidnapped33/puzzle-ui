@@ -860,6 +860,11 @@ get-stream@^5.0.0:
   dependencies:
     pump "^3.0.0"
 
+github-markdown-css@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npm.taobao.org/github-markdown-css/download/github-markdown-css-4.0.0.tgz#be9f4caf7a389228d4c368336260ffc909061f35"
+  integrity sha1-vp9Mr3o4kijUw2gzYmD/yQkGHzU=
+
 glob-parent@^5.1.0, glob-parent@~5.1.0:
   version "5.1.1"
   resolved "https://registry.npm.taobao.org/glob-parent/download/glob-parent-5.1.1.tgz#b6c1ef417c4e5663ea498f1c45afac6916bbc229"
@@ -1468,6 +1473,11 @@ ora@^5.1.0:
     strip-ansi "^6.0.0"
     wcwidth "^1.0.1"
 
+p-map-series@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/p-map-series/download/p-map-series-2.1.0.tgz#7560d4c452d9da0c07e692fdbfe6e2c81a2a91f2"
+  integrity sha1-dWDUxFLZ2gwH5pL9v+biyBoqkfI=
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/parent-module/download/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -1958,10 +1968,10 @@ vary@^1.1.2:
   resolved "https://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vite@^1.0.0-rc.3:
-  version "1.0.0-rc.8"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-1.0.0-rc.8.tgz#26ebe3d6cb7c36f0bceb04398eef0d5d2d7c10df"
-  integrity sha1-Juvj1st8NvC86wQ5ju8NXS18EN8=
+vite@^1.0.0-rc.1:
+  version "1.0.0-rc.9"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-1.0.0-rc.9.tgz#63621a39cf36fe9a6dccafdb11360a5ebbdb2663"
+  integrity sha1-Y2IaOc82/pptzK/bETYKXrvbJmM=
   dependencies:
     "@babel/parser" "^7.12.3"
     "@koa/cors" "^3.1.0"
@@ -2001,6 +2011,7 @@ vite@^1.0.0-rc.3:
     minimist "^1.2.5"
     open "^7.2.1"
     ora "^5.1.0"
+    p-map-series "^2.1.0"
     postcss-discard-comments "^4.0.2"
     postcss-import "^12.0.1"
     postcss-load-config "^3.0.0"

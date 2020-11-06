@@ -8,8 +8,6 @@
 
 <script lang="ts">
 import Demo from "./Demo.vue";
-import Switch from "../lib/Switch.vue";
-import Button from "../lib/Button.vue";
 import Switch1Demo from "./Switch1.demo.vue";
 import Switch2Demo from "./Switch2.demo.vue";
 import "prismjs";
@@ -22,27 +20,18 @@ import {
 
 export default {
     components: {
-        // Switch1Demo,
-        // Switch2Demo,
-        // Switch,
-        Button,
         Demo
     },
     setup() {
-        const bool = ref(false);
         return {
-            bool,
             Switch1Demo,
-            Switch2Demo,
-            Prism
+            Switch2Demo
         };
     }
 };
 </script>
 
-<style>
-@import url("prismjs/themes/prism.css");
-</style><style lang="scss" scoped>
+<style lang="scss" scoped>
 $border-color: #d9d9d9;
 
 .demo {

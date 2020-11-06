@@ -1,6 +1,6 @@
+<demo>常规使用</demo>
 <template>
 <div>
-    <h1>常规使用</h1>
     <div>
         <Button theme="text">开始</Button>
         <Button theme="link">开始</Button>

@@ -1,6 +1,6 @@
+<demo>支持强度</demo>
 <template>
 <div>
-    <h1>支持强度</h1>
     <div>
         <dir>
             <Button theme="text" level="main">主要文字按钮</Button>

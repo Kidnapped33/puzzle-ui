@@ -1,6 +1,6 @@
+<demo>支持禁用</demo>
 <template>
 <div>
-    <h1>支持禁用</h1>
     <div>
         <Button theme="link" disabled>禁用链接按钮</Button>
         <Button theme="text" disabled>禁用文字按钮</Button>

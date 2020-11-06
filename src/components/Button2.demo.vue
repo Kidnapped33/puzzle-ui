@@ -1,6 +1,6 @@
+<demo>支持size</demo>
 <template>
 <div>
-    <h1>支持size</h1>
     <div>
         <Button size="big" theme="text">大大大</Button>
         <Button theme="text">正常</Button>

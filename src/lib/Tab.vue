@@ -1,12 +1,11 @@
 <template>
-  <div>
+<div>
     <slot />
-  </div>
+</div>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+export default {
+    name: "PuzzleTab"
+};
 </script>
-
-<style lang="">
-</style>

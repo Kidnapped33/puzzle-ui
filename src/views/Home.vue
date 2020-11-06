@@ -49,14 +49,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$lightgreen: #02bcb0;
+$lightgreen: rgb(113, 100, 81);
 $border-radius: 4px;
-$color: #007974;
+$color: rgb(113, 100, 81);
 
 .topnavAndBanner {
-    background: linear-gradient(145deg,
-            rgba(227, 255, 253, 1) 0%,
-            rgba(183, 233, 230, 1) 100%);
+    background-color: rgb(250, 238, 214);
+    // background: linear-gradient(145deg,
+    //         rgba(227, 255, 253, 1) 0%,
+    //         rgba(183, 233, 230, 1) 100%);
+    // background: linear-gradient(145deg,
+    //         rgba(197, 220, 192, 1) 0%,
+    //         rgba(45, 97, 59, 1) 100%);
+
+    // background: linear-gradient(101deg,
+    //         rgba(113, 135, 185, 1) 57%,
+    //         rgba(74, 95, 160, 1) 93%,
+    //         rgba(85, 104, 169, 1) 98%,
+    //         rgba(53, 72, 151, 1) 100%);
     clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -89,7 +99,7 @@ $color: #007974;
         flex-wrap: wrap;
 
         >li {
-            width: 400px;
+            width: 380px;
             margin: 16px 0;
             display: grid;
             justify-content: start;
@@ -131,7 +141,7 @@ $color: #007974;
 
         a {
             margin: 0 8px;
-            background: $lightgreen;
+            background: rgb(113, 100, 81);
             color: white;
             display: inline-block;
             border-radius: $border-radius;

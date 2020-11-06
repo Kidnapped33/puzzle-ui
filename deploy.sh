@@ -7,4 +7,4 @@ git commit -m "update" &&
 git branch -M master &&
 git remote add origin git@github.com:Kidnapped33/puzzle-ui.git  &&
 git push -f -u origin master  &&
-cd .. &&
+cd .. 

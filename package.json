@@ -1,9 +1,16 @@
 {
-  "name": "puzzle-ui",
-  "version": "0.0.0",
+  "name": "puzzle-ui-3",
+  "version": "0.0.1",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/puzzle.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
+  },
+  "resolutions": {
+    "node-sass": "npm:sass@^1.26.11"
   },
   "dependencies": {
     "github-markdown-css": "^4.0.0",

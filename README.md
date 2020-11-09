@@ -17,14 +17,14 @@ npm install puzzle-ui
 ```
 yarn add puzzle-ui
 ```
-##引入
+## 引入
 ```
 import {Button, Tab, Tabs, Switch, Dialog, openDialog} from "puzzle-ui"
 import "puzzle-ui/dist/lib/puzzle.css"
 
 ```
 
-##示例
+## 示例
 ```
 <template>
   <Button>按钮</Button>
